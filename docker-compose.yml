@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      args:
+          - PROXY_USER=${PROXY_USER}
+          - PROXY_PASS=${PROXY_PASS}
+          - PROXY_HOST=${PROXY_HOST}
+          - PROXY_PORT=${PROXY_PORT}  
+    ports:
+      - "8000:8000" 
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80" 
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf  
+      - ./static:/usr/src/app/static  
+    depends_on:
+      - app 
+
+networks:
+  default:
+    driver: bridge

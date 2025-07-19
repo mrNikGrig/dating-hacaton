@@ -305,3 +305,72 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 7px 20px rgba(67, 97, 238, 0.4);
 }
+
+/* Страница результатов */
+.results .card {
+    border-radius: 15px;
+    border: none;
+    margin-bottom: 2rem;
+}
+
+.results .card-header {
+    border-radius: 15px 15px 0 0 !important;
+    font-size: 1.5rem;
+    padding: 1.2rem 1.5rem;
+}
+
+.stat-card {
+    transition: var(--transition);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.word-cloud {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 12px;
+}
+
+.word-tag {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    background: white;
+    border-radius: 30px;
+    margin: 0.3rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    transition: var(--transition);
+    border: 1px solid #e9ecef;
+}
+
+.word-tag:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.sentiment-summary {
+    background: #f8f9fa;
+    border-radius: 12px;
+    height: 100%;
+}
+
+.progress {
+    border-radius: 10px;
+    overflow: visible;
+}
+
+.progress-bar {
+    border-radius: 10px;
+    position: relative;
+    overflow: visible;
+    font-weight: 500;
+}
+
+.bg-light-primary { background: rgba(67, 97, 238, 0.1); }
+.bg-light-success { background: rgba(40, 167, 69, 0.1); }
+.bg-light-warning { background: rgba(255, 193, 7, 0.1); }
+.bg-light-info { background: rgba(23, 162, 184, 0.1); }

@@ -3,3 +3,4 @@ torch
 requests
 pillow
 python-dotenv
+flask

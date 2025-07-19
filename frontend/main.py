@@ -26,5 +26,17 @@ def chat_page():
 #     return render_template('index.html')
 
 
+@app.route('/answer')
+def answer_page():
+    """Страница с результатами анализа"""
+    # Получаем результаты анализа из сессии
+    analysis_results = session.get('analysis_results', None)
+    if not analysis_results:
+        flash('Результаты анализа не найдены. Пожалуйста, загрузите файл сначала.')
+        return redirect(url_for('chat_page'))
+    
+    return render_template('answer.html', analysis=analysis_results)
+
+
 if __name__ == '__main__':
     app.run(debug=True)
